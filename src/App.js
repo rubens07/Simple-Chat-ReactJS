@@ -1,8 +1,9 @@
 import React from 'react'
+import Chat from 'src/components/Chat';
 
 function App() {
   return (
-    <h1>Simple Chat</h1>
+    <Chat />
   );
 }
 
