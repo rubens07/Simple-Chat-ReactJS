@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import 'src/components/Chat/styles.css';
+import { io } from 'socket.io-client';
+import config from 'src/properties/config.json';
+
+const socket = io(`http://${config.SERVER_HOST}:${config.SERVER_PORT}`);
+socket.on('connect', () => console.log('[IO] Connect => Connection done.'));
 
 const Chat = () => {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-
   const handleInputChange = (event) => setMessage(event.target.value);
 
   const handleFormSubmit = (event) => {

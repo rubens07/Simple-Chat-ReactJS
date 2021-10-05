@@ -24,3 +24,6 @@ yarn-error.log*
 
 # random
 /project
+
+# server
+server/node_modules
