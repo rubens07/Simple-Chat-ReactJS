@@ -1,13 +1,11 @@
-const config = require('../src/properties/config.json');
-const shost = config.SERVER_HOST || "localhost";
-const sport = config.SERVER_PORT || 8080;
-const chost = config.CLIENT_HOST || "localhost";
-const cport = config.CLIENT_PORT || 3000;
+const shost = "localhost";
+const sport = 8080;
+const chost = "localhost";
+const cport = 3000;
 
 
 const koa = require('koa');
 const http = require('http');
-// const socket = require('socket.io');
 const socket = require("socket.io")
 
 const app = new koa();
@@ -16,6 +14,16 @@ const io = socket(server, {
   cors: {
       origin: `http://${chost}:${cport}`,
   }
+});
+
+io.on("connection", (socket) => {
+  console.log("[IO] Connection => Server has a new connection.");
+  socket.on("chat.message", (data) => {
+    io.emit("chat.message", data);
+  });
+  socket.on("disconnect", () => {
+    console.log("[SOCKET] Disconnect => A connection was disconnected.");
+  });
 });
 
 server.listen(sport, shost, () => {

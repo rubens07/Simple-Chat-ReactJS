@@ -4,8 +4,8 @@ This is a Real Time App with React + Socket IO based on [this project](https://g
 
 ## Frontend
 
-React JS
+React JS using socket on port *8080* and internal IP.
 
 ## Backend
 
-NodeJs + Socket IO
+NodeJs + Socket IO up on port *8080* and with CORS enabled for React JS port *3000* using internal IP.

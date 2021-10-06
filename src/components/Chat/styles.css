@@ -18,6 +18,7 @@
   .form {
     background: #434758;
     padding: 1rem;
+    display: flex;
   }
   
   .form__field {
@@ -33,6 +34,20 @@
     border-color: #a3f7ff;
     box-shadow: 0 0 7px #a3f7ff;
     outline: none;
+  }
+
+  .form__button {
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    width: 2rem;
+    margin-left: 1rem;
+    background-color: #43475840;
+    font-size: 30px;
+    color: #00ffff9c;
+  }
+
+  .form__button:hover {
+    cursor: pointer;
   }
   
   .list {
