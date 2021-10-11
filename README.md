@@ -17,7 +17,7 @@ NodeJs + Socket IO up on port *8080* and with CORS enabled for React JS port *30
     + Check if the program has been installed:
         `nodejs -v`
 + Clone the project;
-    `git clone www`
+    `git clone https://github.com/rubens07/Simple-Chat-ReactJS.git`
 + Open the folder and install all dependencies;
     ```sh
     cd simple-chat

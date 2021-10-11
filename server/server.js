@@ -12,7 +12,7 @@ const app = new koa();
 const server = http.createServer(app.callback());
 const io = socket(server, {
   cors: {
-      origin: `http://${chost}:${cport}`,
+    origin: `http://${chost}:${cport}`,
   }
 });
 
