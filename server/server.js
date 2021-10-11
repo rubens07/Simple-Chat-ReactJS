@@ -1,6 +1,6 @@
-const shost = "localhost";
+const shost = "192.168.0.1";
 const sport = 8080;
-const chost = "localhost";
+const chost = "192.168.0.1";
 const cport = 3000;
 
 

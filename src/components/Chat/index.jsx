@@ -3,7 +3,7 @@ import 'src/components/Chat/styles.css';
 import { io } from 'socket.io-client';
 import { v4 as uuidv4 } from 'uuid';
 
-const socket = io.connect(`http://localhost:8080`);
+const socket = io.connect(`http://192.168.0.1:8080`);
 socket.on('connect', () => console.log('[IO] Connect => Connection done.'));
 const myID = uuidv4();
 
